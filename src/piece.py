@@ -1,23 +1,34 @@
+import os
+import pygame
+
 class Piece:
 
-    def __init__(self, name, color, value, texture, texture_rect=None):
-        self.name =name
+    def __init__(self, name, color, value, size=80):
+        self.name = name
         self.color = color
         value_sign = 1 if color == 'white' else -1
         self.value = value * value_sign
-        self.set_texture()
-        self.texture_rect = texture_rect
+        self.moves = []
+        self.moved = False
 
-    def set_texture(self):
-        pass
+        self.set_texture(size)
+        self.texture_rect = None
+
+    def set_texture(self, size=80):
+        self.texture = os.path.join(
+            'assets', 'images', f'imgs-{size}px', f'{self.color}_{self.name}.png'
+        )
+
+        self.image = pygame.image.load(self.texture)
+        self.image = pygame.transform.scale(self.image, (size, size))
+
+    def add_moves(self, move):
+        self.moves.append(move)
 
 class Pawn(Piece):
 
     def __init__(self, color):
-        if color == 'white':
-            self.direction = -1
-        else:
-            self.direction = 1
+        self.direction = -1 if color == 'white' else 1
         super().__init__('pawn', color, 1.0)
 
 class Knight(Piece):
@@ -43,4 +54,4 @@ class Queen(Piece):
 class King(Piece):
 
     def __init__(self, color):
-        super(). __init__('king', color, 10000.0)
+        super().__init__('king', color, 10000.0)
