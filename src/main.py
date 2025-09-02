@@ -10,7 +10,9 @@ class Main:
 
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode( (WIDTH, HEIGHT) )
+        pygame.event.set_blocked(None)
+        pygame.event.set_allowed([pygame.QUIT, pygame.KEYDOWN, pygame.MOUSEBUTTONDOWN, pygame.MOUSEBUTTONUP, pygame.MOUSEMOTION])
+        self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.HWSURFACE | pygame.DOUBLEBUF)
         pygame.display.set_caption('Chess')
         self.game = Game()
 
@@ -64,13 +66,6 @@ class Main:
 
                     if dragger.dragging:
                         dragger.update_mouse(event.pos)
-                        # show methods
-                        game.show_bg(screen)
-                        game.show_last_move(screen)
-                        game.show_moves(screen)
-                        game.show_pieces(screen)
-                        game.show_hover(screen)
-                        dragger.update_blit(screen)
                 
                 # click release
                 elif event.type == pygame.MOUSEBUTTONUP:
