@@ -22,7 +22,7 @@ class Piece:
         self.image = pygame.image.load(self.texture)
         self.image = pygame.transform.scale(self.image, (size, size))
 
-    def add_moves(self, move):
+    def add_move(self, move):
         self.moves.append(move)
 
 class Pawn(Piece):
