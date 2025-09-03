@@ -28,26 +28,23 @@ Press r to restart the game.
 
 ---
 
+# Author
+Malcolm Kagolobya
+
+---
+
 # Installation
 
 Make sure you have Python 3.x installed.
 
 Install the required packages:
 
-pip install pygame
-
-
-Clone this repository:
-
-git clone git@github.com:KagsM/pygame-chess.git
-cd pygame-chess
-
+Clone the repository:
 
 Run the game:
 
+```bash
+pip install pygame
+git clone git@github.com:KagsM/pygame-chess.git
+cd pygame-chess
 python main.py
-
----
-
-# Author
-Malcolm Kagolobya
