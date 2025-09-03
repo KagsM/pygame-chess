@@ -9,3 +9,8 @@ This is a simple chess game made using pygame with dragging piece movement, move
 - Entry point: main.py
 - Press 't' to change between themes (green, brown, blue, gray)
 - Press 'r' to restart the game
+
+---
+
+# Author
+Malcolm Kagolobya
