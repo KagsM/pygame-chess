@@ -39,7 +39,7 @@ pip install pygame
 
 Clone this repository:
 
-git clone https://github.com/your-username/pygame-chess.git
+git clone git@github.com:KagsM/pygame-chess.git
 cd pygame-chess
 
 
