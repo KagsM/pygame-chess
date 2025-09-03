@@ -1,14 +1,51 @@
-# pygame-chess
+# Pygame Chess
 
-# Description
-This is a simple chess game made using pygame with dragging piece movement, move validation, and in game themes.
+A simple and interactive chess game built with Pygame, featuring drag-and-drop piece movement, move validation, and customizable in-game themes.
 
 ---
 
-# Game setup
-- Entry point: main.py
-- Press 't' to change between themes (green, brown, blue, gray)
-- Press 'r' to restart the game
+# Features
+
+Drag-and-Drop Movement: Move pieces naturally with your mouse.
+
+Move Validation: Only legal chess moves are allowed.
+
+Customizable Themes: Switch between multiple board themes during gameplay.
+
+Restart Game: Quickly restart a game without restarting the program.
+
+---
+
+# Game Setup
+
+Entry Point: main.py
+
+Controls:
+
+Press t to cycle through themes (green, brown, blue, gray).
+
+Press r to restart the game.
+
+---
+
+# Installation
+
+Make sure you have Python 3.x installed.
+
+Install the required packages:
+
+pip install pygame
+
+
+Clone this repository:
+
+git clone https://github.com/your-username/pygame-chess.git
+cd pygame-chess
+
+
+Run the game:
+
+python main.py
 
 ---
 
